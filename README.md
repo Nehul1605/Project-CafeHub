@@ -49,6 +49,16 @@ CaféHub is a web-based food delivery service that allows users to explore the m
   - `self-pickup.html`: Self-pickup order page
   - `signIn.html`: User login page
   - `signUp.html`: User registration page
+ 
+## Developed by Creative Coders
+
+This project was developed by the following team members:
+
+1. Ansh Deep
+2. Nehul Gupta
+3. Aditya Sharma
+4. Ashwin Singh
+
 
 ## Contribution Guidelines
 
