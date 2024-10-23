@@ -1,0 +1,88 @@
+<!-- signup.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 30%;
+            margin: 100px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 96%;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form id="signUpForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <script>
+        const validDomain = '@srmist.edu.in';
+
+        document.getElementById("signUpForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long.");
+                return;
+            }
+
+            if (email.endsWith(validDomain)) {
+                let users = JSON.parse(localStorage.getItem("users")) || [];
+
+                if (users.find(user => user.email === email)) {
+                    alert("This email is already signed up.");
+                } else {
+                    users.push({ email, password });
+                    localStorage.setItem("users", JSON.stringify(users));
+                    alert("Sign Up Successful!");
+                    window.location.href = "signin.html";
+                }
+            } else {
+                alert("Only SRM email addresses are allowed.");
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!-- signin.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 30%;
+            margin: 100px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 96%;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Sign In</h2>
+        <form id="signInForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+
+            <button type="submit">Sign In</button>
+        </form>
+    </div>
+
+    <script>
+        const validDomain = '@srmist.edu.in';
+
+        document.getElementById("signInForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            if (email.endsWith(validDomain)) {
+                let users = JSON.parse(localStorage.getItem("users")) || [];
+
+                let user = users.find(user => user.email === email);
+
+                if (user && user.password === password) {
+                    localStorage.setItem("isLoggedIn", "true");
+                    alert("Sign In Successful!");
+                    window.location.href = "menu.html";
+                } else if (user) {
+                    alert("Incorrect password. Please try again.");
+                } else {
+                    alert("This email is not signed up. Please sign up first.");
+                    window.location.href = "signup.html";
+                }
+            } else {
+                alert("Only SRM email addresses are allowed.");
+            }
+        });
+    </script>
+</body>
+
+</html>

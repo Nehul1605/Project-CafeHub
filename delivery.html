@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canteen Delivery System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Canteen Delivery</h2>
+    <label for="name">Enter your name:</label>
+    <input type="text" id="name" placeholder="Your Name">
+
+    <label for="location">Select your location:</label>
+    <select id="location">
+        <option value="hostel">Within College</option>
+        <option value="blockD">Block D</option>
+        <option value="blockH">Block H</option>
+        <option value="blockG">Block G</option>
+        <option value="blockE">Block E</option>
+        <option value="blockF">Block F</option>
+        <option value="library">Library Area</option>
+    </select>
+
+    <button onclick="calculateCharge()">Get Delivery Time</button>
+
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+    function calculateCharge() {
+        const name = document.getElementById("name").value;
+        const location = document.getElementById("location").value;
+        let time = 0;
+
+        if (location === "hostel") {
+            time = 25;
+        } else if (["blockD", "blockH", "blockG", "blockE", "blockF"].includes(location)) {
+            time = 20;
+        } else if (location === "library") {
+            time = 15;
+        }
+
+        if (name === "") {
+            document.getElementById("result").innerHTML = "Please enter your name.";
+        } else {
+            document.getElementById("result").innerHTML = `Hello ${name}, the delivery time for your location is ${time} mins.` +
+                `<br>Thank you for using our service!`;
+
+            setTimeout(function() {
+                window.location.href = 'index.html';
+            }, 5000); 
+        }
+    }
+</script>
+
+</body>
+</html>

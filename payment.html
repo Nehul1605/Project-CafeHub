@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Payment</title>
+    <link rel="stylesheet" href="css/payment.css">
+</head>
+
+<body>
+   
+    <div id="checkout-options" class="checkout-container">
+        <h1>Choose Payment Method</h1>
+        <p>Total Amount: Rs. <span id="total-amount">500</span></p>
+        <button id="pay-now">Pay Now</button>
+        <button id="pay-later">Pay Later</button> 
+    </div>
+    
+    
+    <div id="qr-container" class="qr-container" style="display:none;">
+        <h1>Scan the QR Code to Pay</h1>
+        <div id="qrcode"></div>
+        <p>Total Amount: Rs. <span id="total-amount-qr">500</span></p>
+        <p>Time Left: <span id="time-left">05:00</span></p>
+    </div>
+
+    
+    <div id="order-confirmation" class="order-confirmation" style="display:none;">
+        <h2>Your order is placed!</h2>
+        <p>Please select pick-up or delivery:</p>
+        <button id="self-pickup">Self Pick-Up</button>
+        <button id="delivery">Delivery</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script src="js/payment.js"></script>
+</body>
+
+</html>

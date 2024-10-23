@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self Pick-Up</title>
+    <link rel="stylesheet" href="css/selfpickup.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Self Pick-Up</h1>
+
+        <div class="pickup-location">
+            <h2>Select Your Pickup Location</h2>
+            <select id="location-select">
+                <option value="">Select a location</option>
+                <option value="Red Canteen">Red Canteen</option>
+                <option value="Green Canteen">Green Canteen</option>
+                <option value="Orange Blossom">Orange Blossom</option>
+                <option value="Block-H-Canteen">Block-H-Canteen</option>
+            </select>
+        </div>
+
+        <div class="pickup-time">
+            <h2>Select Pickup Time</h2>
+            <input type="datetime-local" id="pickup-time">
+        </div>
+
+        <div class="confirm-pickup">
+            <button id="confirm-pickup">Confirm Pickup</button>
+        </div>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        document.getElementById('confirm-pickup').addEventListener('click', function() {
+            const location = document.getElementById('location-select').value;
+            const pickupTime = document.getElementById('pickup-time').value;
+
+            if (location && pickupTime) {
+                document.getElementById("result").innerHTML = `Your pickup is confirmed at ${location} at ${new Date(pickupTime).toLocaleString()}.` +
+                `<br>Thank you for using our service!`;
+
+                setTimeout(function() {
+                    window.location.href = 'index.html';
+                }, 5000);
+            } else {
+                alert('Please select a pickup location and time.');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
