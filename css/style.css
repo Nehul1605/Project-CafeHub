@@ -73,7 +73,21 @@ text-decoration-color: #A4FF7C;
 text-decoration-thickness: 2px;
 }
 
+.logoutBtn {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
+.logoutBtn:hover {
+    text-decoration: underline;
+    text-decoration-color: #A4FF7C;
+    text-decoration-thickness: 2px;
+}
 
 .heading{
 font-weight: 700;
