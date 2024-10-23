@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    
+    background-color: #d2f8c1;
+}
+
+.parentContainer{
+    background-image: url('/Images/background2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-size: 100% 92%; */
+    border-radius: 12px;
+}
+.nav {
+display: flex;
+justify-content: space-between;
+/* background-color: whitesmoke; */
+align-items: center;
+padding: 10px 20px;
+width: auto;
+top: 0;
+border-radius: 12px;
+font-family: Arial, Helvetica, sans-serif;
+/* position: fixed; */
+}
+.brandName{
+color: #A4FF7C;
+}
+ul {
+display: flex;
+list-style: none;
+gap: 30px;
+font-size: 20px;
+color: #003366;
+;
+}
+
+li {
+/* padding: 10px; */
+cursor: pointer;
+color: whitesmoke;
+
+}
+a{
+color: whitesmoke;
+text-decoration: none;
+}
+
+a:hover{
+text-decoration: underline;
+text-decoration-color: #A4FF7C;
+}
+
+.signInBtn {
+background-color: transparent; 
+color: white; 
+padding: 10px 20px; 
+font-size: 22px; 
+border: none;
+cursor: pointer;
+transition: background-color 0.3s ease; 
+}
+
+.signInBtn:hover {
+text-decoration: underline;
+text-decoration-color: #A4FF7C;
+text-decoration-thickness: 2px;
+}
+
+
+
+.heading{
+font-weight: 700;
+color: rgb(114, 239, 114);
+font-size: 100px;
+max-width: 550px;
+margin: 50px 0px 40px 40px;
+}
+
+.description{
+font-weight: 500;
+color: #F0F0F0;
+max-width: 700px;
+margin: 0px 0px 40px 40px;
+font-size: 26px;
+}
+
+.container{
+display: flex;
+justify-content: space-between;
+}
+
+.backImg{
+border-radius: 100%;
+}
+
+.aboutHead{
+color: rgb(95, 235, 95);
+font-weight: 700;
+font-size: 30px;
+}
+
+.about{
+    font-family: "Poppins", sans-serif;
+    margin-left: 35px;
+    padding: 20px;
+}
+
+.aboutDesc{
+    font-size: 24px;
+    max-width: 680px;
+}
+
+.secondCont{
+    display: flex;
+    justify-content:space-around;
+    margin-top: 30px;
+    background-color: black;
+    border-radius: 12px;
+    color: white;
+}
+.timing{
+    font-family: "Poppins", sans-serif;
+    padding: 20px;
+}
+.timeHead{
+    color: rgb(95, 235, 95);
+}
+
+.timeDay{
+   
+   font-size: 22px;
+}
+
+.contactHead{
+    color: rgb(95, 235, 95);
+}
+
+.contactMail{
+    font-size: 22px;
+}
+
+footer{
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    margin-top: 10px;
+    padding: 20px;
+    background-color: black;
+    border-radius: 12px;
+    color: white;
+}

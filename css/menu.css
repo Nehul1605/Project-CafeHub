@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  display: grid;
+  background-color: rgb(199, 242, 196);
+}
+
+h1 {
+  margin: 40px;
+  color: rgb(41 230 60);
+  justify-self: center;
+}
+
+img {
+  border-radius: 12px;
+}
+
+.parentContainer {
+  margin: 40px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  max-width: 230px;
+}
+
+.imgHead {
+  justify-self: center;
+  margin: 10px 0px 0px 0px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.imgPrice {
+  margin: 8px;
+  justify-self: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  font-size: 18px;
+}
+
+.value {
+  width: 30px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  font-size: 20px;
+  border: none;
+  border-radius: 100%;
+}
+
+input {
+  width: 50px;
+  text-align: center;
+  border: 1px solid #ccc;
+  margin: 0 5px;
+  font-size: 20px;
+  border: none;
+  border-radius: 12px;
+}
+
+.addCart {
+  justify-self: center;
+  margin: 12px;
+  border: none;
+  background-color: lightgreen;
+  padding: 8px;
+  border-radius: 12px;
+  width: 150px;
+  font-size: large;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+.menuImage {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+}
+
+.cart-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  cursor: pointer;
+}
+
+#cart-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.cart-count {
+  position: absolute;
+  top: 0;
+  background-color: red;
+  color: white;
+  border-radius: 180%;
+  padding: 5px;
+  font-size: 12px;
+}
+
+.cart-summary {
+  position: fixed;
+  right: 20px;
+  top: 80px;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  visibility: hidden;
+}
+
+.cart-summary.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cart-summary h3 {
+  margin: 0;
+}
+
+.cart-summary ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cart-summary ul li {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
