@@ -57,7 +57,7 @@ This project was developed by the following team members:
 1. Ansh Deep
 2. Nehul Gupta
 3. Aditya Sharma
-4. Ashwin Singh
+
 
 
 ## Contribution Guidelines
